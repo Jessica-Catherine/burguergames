@@ -166,27 +166,35 @@ hr{
 } 
 
 /* GALERIA */
-
-.grid-G{
+#galeria{
     display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-template-rows: 4fr 4fr;
-    gap: 3%;
-    padding:10%  ;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 40% 40% 40%;
+    margin: 5% 5% 10% 10%; 
+    column-gap: 1%;
+    row-gap: 0.1%;
     
-
 }
-.grid-itemG img{
-    height: 100%;
+
+.galeriaItem{
+    align-self: center;
     width: 100%;
-    border-radius: 10% 10% 10% 10%;
-    box-shadow: #000;
-    margin-top: 20% ;
-    
-   
+    height: 100%;
+
 }
 
-#formulario{
+.galeriaItem img{
+    border-radius: 5%;
+}
+
+#galeriaTexto{
+    text-align: center;
+    margin-top: 5%;
+    font-family:Impact, fantasy;
+    color: rgb(42, 42, 225) ;
+}
+
+/* #formulario{
     width: 100%;
     color:#ffffff;
 }
@@ -198,7 +206,7 @@ hr{
 #botaoForm{
     background-color: rgb(42, 42, 225) ;
     margin-top: 5%;
-}
+} */
 
 #caixa{
     display: flex;
@@ -226,30 +234,26 @@ hr{
     font-family:Impact, fantasy; 
 }
 
-
-@media(max-width:1000px){
-    button{
-        display: none;
+/*FORMULARIO*/
+.caixa{
+    background: url(images/Form.jpg) center / cover ;
+    height: 200%;
+    width: 100%;
+    padding: 10% ;
     }
     
-    .subHeader{
-        display: none;
-    }
-
-    .grid{
-        display: grid;
-        grid-template-columns: 4fr 4fr ;
-        grid-template-rows: 4fr 4fr 4fr 4fr 4fr ;
-        padding-bottom: 20%;
-    }
-
-    .grid-item{
-        margin-bottom: 10%;
-        margin-right: 10%;
-    }
-
-    .d-block{
-        height: 50vh;
+    #formulario{
+    width: 100%;
+    color:#ffffff;
     }
     
-}
+    #form2{
+    color: #ffffff;
+    }
+    #botaoForm button{
+    background-color: rgb(42, 42, 225) ;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    }
+
