@@ -166,61 +166,30 @@ hr{
 } 
 
 /* GALERIA */
-#galeria{
+
+.grid-G{
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 40% 40% 40%;
-    margin: 5% 5% 10% 10%; 
-    column-gap: 1%;
-    row-gap: 0.1%;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 4fr 4fr;
+    gap: 3%;
+    padding:10%  ;
     
-}
 
-.galeriaItem{
-    align-self: center;
-    width: 100%;
+}
+.grid-itemG img{
     height: 100%;
-
-}
-
-.galeriaItem img{
-    border-radius: 5%;
-}
-
-#galeriaTexto{
-    text-align: center;
-    margin-top: 5%;
-    font-family:Impact, fantasy;
-    color: rgb(42, 42, 225) ;
-}
-
-/* #formulario{
     width: 100%;
-    color:#ffffff;
-}
-
-#form2{
-    color: #ffffff;
-}
-
-#botaoForm{
-    background-color: rgb(42, 42, 225) ;
-    margin-top: 5%;
-} */
-
-#caixa{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 40vw;
-    margin-top: 20%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: #000;
+    margin-top: 20% ;
     
+   
 }
 
 .c{
     color: #ffffff;
     font-family: Snell Roundhand, cursive;
+    text-align: center;
 }
 
 #h1Cardapio{
@@ -232,6 +201,39 @@ hr{
 
 .liHeader{
     font-family:Impact, fantasy; 
+}
+
+
+@media(max-width:1000px){
+    button{
+        display: none;
+    }
+    
+    .subHeader{
+        display: none;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 4fr 4fr ;
+        grid-template-rows: 4fr 4fr 4fr 4fr 4fr ;
+        padding-bottom: 20%;
+    }
+
+    .grid-item{
+        margin-bottom: 10%;
+        margin-right: 10%;
+    }
+
+    .d-block{
+        height: 50vh;
+    }
+
+    #textSb{
+        font-size: 85%;
+    }
+
+    
 }
 
 /*FORMULARIO*/
@@ -256,4 +258,3 @@ hr{
     display: flex;
     justify-content: center;
     }
-
