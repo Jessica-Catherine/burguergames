@@ -8,11 +8,19 @@
 body{
     background-color: #ffffff;
 }
-
-#CorpoForm{
-    background: url(images/fundoFormulario2.png) center / cover no-repeat;
-    height: 60vh;
-}
+body::-webkit-scrollbar {
+    width: 12px;             /*Trilho( espaço em branco)*/
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #333;    /*Trilo (Espaço em branco)*/    
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #120A8f;  /*Barra que se move*/  
+    border-radius: 20px;       
+    
+  }
 
 header{
     display: flex;
@@ -32,7 +40,7 @@ nav{
 #logo img{
     width: 10%;
     height: 80%;  
-    margin-left: 40%;
+    margin-left: 42%;
     padding: 1%;
 }
 .subHeader{
@@ -47,10 +55,10 @@ nav{
 #botao{
     background-color:rgb(47, 47, 168);
     color: #ffffff;
-    width: 24%;
     height: 20%;
     border-radius: 20%;
-    margin-left: 70%;
+    margin-bottom: 5%;
+
     
 }
 #botao img{ 
@@ -86,12 +94,25 @@ nav{
     color: #000;
     
 }
-#control{
-    width: 50%;
-    height: 50%;
+.control img{
+    margin: 3% 0% 0% 32%;
+    animation: float 5s ease-in-out infinite;
     display: flex;
     justify-content: center;
-    margin: 3% 24%;
+    width: 34%;
+    
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 /* CARDAPIO GRID*/
@@ -100,34 +121,113 @@ nav{
     height: 10%;
     width:100%;
 }
+.c{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: Snell Roundhand, cursive;
+}
+
+#Cardapio{
+    font-family:Impact, fantasy;
+    text-align: center;
+    color: #ffffff;
+}
 .grid {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr;
     gap: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5% 10% 5% 10%;
     
-
+    
 }
 .grid-item img{
-    height: 100%;
+    height: 85%;
     width: 100%;
-    border-radius: 10% 10% 0% 0%;
+    border-radius: 10% 10% 10% 10%;
     box-shadow: #000;
     
    
 }
 
 
+
+/* GALERIA */
+
+.grid-G{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 4fr 4fr;
+    gap: 3%;
+    padding:10%  ;
+    
+    
+}
+.grid-itemG img{
+    height:80%;
+    width: 100%;
+    border-radius: 10% 10% 10% 10%;
+    box-shadow: #000;
+    margin-top: 20% ;
+    
+    
+
+}
+
+.imagesPkm img{
+    height: 100%;
+    width: 100%;
+}
+.rayq img{
+   
+    position: absolute ;
+    width: 30%;
+    height: 30%;
+    margin: 6% 0 0 3%;
+    animation: float 5s ease-in-out infinite;
+
+}
+.chari img{
+    position:absolute;
+    width: 30%;
+    height: 30%;
+    margin: 80% 0 0 70%;
+    animation: float 5s ease-in-out infinite;
+
+}
+
+/*FORMULARIO*/
+.caixa{
+background: url(./images/Form.jpg) center / cover ;
+height: 150%;
+width: 100%;
+padding: 10% ;
+}
+
+#formulario{
+width: 100%;
+color:#ffffff;
+}
+
+#form2{
+color: #ffffff;
+}
+#botaoForm button{
+background-color: rgb(42, 42, 225) ;
+margin-top: 5%;
+display: flex;
+justify-content: center;
+}
+
+
+
 /*FOOTER*/
 footer{
  color: #ffffff;
  padding: 2%;
- background-color: #333333;
- margin-top: 20%;
+ background-color: #1b1a1a;
+ 
 }
 .fkFoot{
  display: flex;
@@ -162,42 +262,9 @@ hr{
    margin: auto;
    width: auto;
    background-color: aqua;
-    /* overflow-x: hidden; */
+   
 } 
 
-/* GALERIA */
-
-.grid-G{
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-template-rows: 4fr 4fr;
-    gap: 3%;
-    padding:10%  ;
-    
-
-}
-.grid-itemG img{
-    height: 100%;
-    width: 100%;
-    border-radius: 10% 10% 10% 10%;
-    box-shadow: #000;
-    margin-top: 20% ;
-    
-   
-}
-
-.c{
-    color: #ffffff;
-    font-family: Snell Roundhand, cursive;
-    text-align: center;
-}
-
-#h1Cardapio{
-    font-family:Impact, fantasy;
-    text-align: center;
-    margin-top: 15%;
-    color: #ffffff;
-}
 
 .liHeader{
     font-family:Impact, fantasy; 
@@ -229,32 +296,19 @@ hr{
         height: 50vh;
     }
 
-    #textSb{
-        font-size: 85%;
+    .grid-G{
+        display: grid;
+        grid-template-columns: 4fr 4fr ;
+        grid-template-rows: 4fr 4fr 4fr ;
+        padding-bottom: 20%;
     }
 
-    
+    .grid-itemG{
+        margin-bottom: 10%;
+        margin-right: 10%;
+    }
+
+    .imagesPkm{
+        display: none;
+    }
 }
-
-/*FORMULARIO*/
-.caixa{
-    background: url(images/Form.jpg) center / cover ;
-    height: 200%;
-    width: 100%;
-    padding: 10% ;
-    }
-    
-    #formulario{
-    width: 100%;
-    color:#ffffff;
-    }
-    
-    #form2{
-    color: #ffffff;
-    }
-    #botaoForm button{
-    background-color: rgb(42, 42, 225) ;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    }
